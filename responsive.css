@@ -1,0 +1,655 @@
+/* common */
+
+@media screen and (max-width: 599px) {
+
+    body {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+   .header {
+        position: relative;
+    }
+
+    .header_inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        height: 100px;
+    }
+
+    .header_logo img {
+        width: 80px;
+    }
+
+    .toggle_menu_button {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: #000;
+        z-index: 30;
+    }
+
+    /* メニューを縦に */
+    .site_menu {
+        display: none;
+        position: absolute;
+        top: 100%;      /* ヘッダー下 */
+        right: 0;
+        width: 200px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        padding: 10px 0;
+        z-index: 20;
+    }
+
+    .site_menu.active {
+        display: block;  /* display: flex だと ul が横並びになるので block に */
+    }
+
+    /* ul を縦並びに */
+    .site_menu ul {
+        display: block; 
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    /* li をブロックにして縦並び */
+    .site_menu li {
+        width: 100%;
+    }
+
+    .site_menu li a {
+        display: block;
+        padding: 15px 20px;
+        text-align: left;
+        font-size: 16px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .site_menu li:last-child a {
+        border-bottom: none;
+    }
+
+    /* メイン画像 */
+    .main img {
+        width: 100%;
+        height: 55vh;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 14px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    footer p {
+        font-size: 10px;
+        line-height: 18px;
+    }
+
+    .name {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+}
+
+/* index */
+
+@media screen and (max-width: 599px) {
+
+    /* ファーストビュー */
+    .first_view {
+        height: 60vh; /* 高さを少し小さく */
+        align-items: flex-end; /* 文字を下寄せ */
+        background-position: center;
+    }
+
+    .first_view_text img {
+        max-width: 90%;
+    }
+
+
+    .first_view_text {
+        margin-top: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .first_view_text h1 {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .first_view_text p {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    /* リード文 */
+    .lead {
+        margin: 30px auto;
+        padding: 0 15px;
+    }
+
+    .lead p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    /* ボタン */
+    .link_button {
+        min-width: 140px;
+        line-height: 32px;
+        font-size: 12px;
+    }
+
+    /* 推薦・おすすめ一覧 */
+    .item_list {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .item_list li {
+        max-width: 90%;
+    }
+
+    .item_list img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* 日付ボックス */
+    .day_box {
+        width: 50px;
+        font-size: 10px;
+        line-height: 16px;
+    }
+
+    .day {
+        font-size: 14px;
+    }
+
+    /* Exhibition（展示一覧） */
+    .exhibition_list {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .exhibition_list li {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .exhibition_list img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* ニュース一覧 */
+    .news_list {
+        width: 90%;
+        font-size: 12px;
+    }
+
+    .news_list li a {
+        padding: 5px 0;
+    }
+
+    .news_list li a span {
+        font-size: 10px;
+    }
+
+    .news_list li a p {
+        font-size: 12px;
+    }
+
+    /* イベント */
+
+        .img_box {
+        flex-direction: column; /* 横並び → 縦並び */
+        gap: 10px;              /* 画像間の余白 */
+        align-items: center;     /* 中央揃え */
+    }
+
+    .img_box img {
+        width: 100%;            /* 幅を画面に合わせる */
+        height: auto;           /* 高さ自動調整 */
+    }
+
+    /* 2番目の li 内のボタンは非表示 */
+    .item_list li:nth-child(2) .link_button_area {
+        display: none;
+    }
+
+    /* 3番目の li 内のボタン（mobile-only）は表示 */
+    .item_list li .link_button_area.mobile-only {
+        display: block;
+        width: 90%;
+        text-align: center;
+        margin-top: 15px;
+    }
+}
+
+/* about */
+
+@media screen and (max-width: 599px) {
+
+    .main_box h1 {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .main_box {
+        padding: 2em 1em;
+    }
+
+    .breadcrumb {
+        font-size: 10px;
+    }
+
+    .content {
+        flex-direction: column; /* 横並び → 縦並び */
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        gap: 1.2em;
+    }
+
+    /* ←タイトルも調整 */
+    .content h1 {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .content img {
+        width: 100%; /* 画面幅いっぱい */
+        height: auto;
+        order: 2; /* 画像を下に */
+    }
+
+    .text_wrapper {
+        order: 1; /* テキストを上に */
+        width: 100%;
+    }
+
+    .partition {
+        display: none; /* 区切り線不要 */
+    }
+
+    .content_text {
+        font-size: 11px;
+        width: 100%;
+        line-height: 18px;
+    }
+}
+
+/* artists */
+
+@media screen and (max-width: 599px) {
+
+    main {
+        padding: 2em 1em;
+    }
+
+    main h1 {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .breadcrumb {
+        font-size: 10px;
+    }
+
+    .main_box {
+        flex-direction: column; /* 横並び → 縦並び */
+        gap: 1em;
+    }
+
+    .artist_box {
+        width: 100%; /* 幅いっぱい */
+        margin: 10px 0; /* 上下の余白だけ */
+        padding: 15px; /* 内側余白を少し小さく */
+    }
+
+    .artist_box:hover {
+        background: #f5efe9; /* ホバーは変えずにOK */
+    }
+}
+
+/* artists_datail */
+
+@media screen and (max-width: 599px) {
+
+    main {
+        padding: 2em 1em;
+    }
+
+    main h1 {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .breadcrumb {
+        font-size: 10px;
+    }
+
+    /* キャリア */
+    .career {
+        margin-left: 0;       /* 左マージン解除 */
+        padding: 0 15px;      /* スマホでも余白確保 */
+    }
+
+    .career_list {
+        display: flex;
+        flex-direction: column; /* liを縦並びに */
+        gap: 5px;               /* li間の余白 */
+        font-size: 12px;        /* 小さめに調整 */
+        line-height: 1.4em;
+    }
+
+    .career_list li {
+        display: flex;
+        flex-direction: column; /* 年代と内容を縦に */
+        gap: 5px;               /* li内の要素間の隙間 */
+        margin-bottom: 15px;    /* liごとに下の空白を追加 */
+    }
+
+    .career_list li strong {
+        flex: 0 0 auto;
+        margin-bottom: 5px;     /* 年代と本文の間 */
+        font-weight: 500;
+    }
+
+    .career_list li:not(:has(strong)) strong {
+        display: none;          /* 空の strong は非表示 */
+    }
+
+
+
+    /* デザイン紹介 */
+    .design {
+        flex-direction: column; /* 横並び → 縦並び */
+        align-items: flex-start;
+        gap: 1em;
+        margin-bottom: 30px;
+    }
+
+    .design img {
+        width: 100%;      /* 画面幅いっぱいに広げる */
+        height: auto;     /* 縦横比を維持 */
+        object-fit: cover; /* 必要に応じて余白なく表示 */
+        margin-bottom: 10px; /* 画像間の余白 */
+    }
+}
+
+/* exhibition */
+
+@media screen and (max-width: 599px) {
+
+    .content {
+        flex-direction: column; /* 横並び → 縦並び */
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        gap: 1em;
+    }
+
+    .text_wrapper {
+        order: 1; /* テキストを上に */
+        width: 100%;
+        align-items: flex-start; /* 左寄せに */
+    }
+
+    .content img {
+        width: 100%; /* 画面幅いっぱい */
+        order: 2; /* 画像を下に */
+        object-fit: cover;
+    }
+
+    .partition {
+        display: none; /* 区切り線は非表示 */
+    }
+
+    .content_text,
+    .content_title {
+        width: 100%;
+        font-size: 12px;
+        line-height: 18px;
+        padding: 0.5em 0.5em;
+    }
+
+    .sub_img img {
+        width: 100%; /* サブ画像も画面幅いっぱい */
+        height: auto;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* showcase */
+
+@media screen and (max-width: 599px) {
+
+    /* main_box 内のレイアウトを縦並びに */
+    .main_box {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+        margin-top: 20px;
+    }
+
+    .main_left img,
+    .main_right {
+        width: 90%; /* 幅を画面サイズに合わせる */
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+
+    .main_right {
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .main_right p {
+        margin-left: 0;
+    }
+
+    .img_sub,
+    .img_sub2 {
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: 0;
+        transform: none;
+        margin-top: 10px;
+    }
+
+    /* content を縦並びに */
+    .content {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        gap: 1em;
+    }
+
+    .text_wrapper {
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .content img {
+        width: 100%; /* 幅を画面に合わせる */
+        order: 2;    /* 画像を下に */
+        object-fit: cover;
+    }
+
+    .partition {
+        display: none; /* 区切り線は非表示 */
+    }
+
+    .sub_img img {
+        width: 100%; /* サブ画像も画面幅いっぱい */
+        height: auto;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .link_button_area {
+        margin-top: 20px;
+    }
+
+    .link_button {
+        min-width: 100%;
+        line-height: 36px;
+        font-size: 12px;
+    }
+
+    /* テキストサイズ調整 */
+    .text_name,
+    .content_title,
+    .sub_content,
+    .event_title {
+        font-size: 14px;
+    }
+
+        .content {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        gap: 20px;
+    }
+
+    .content img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        order: 1;
+    }
+
+    .partition {
+        display: none;
+    }
+
+    .text_wrapper {
+        order: 2;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .info_row {
+        flex-direction: column;  /* 横並び→縦並び */
+        align-items: center;     /* 中央揃え */
+        justify-content: center; /* 中央揃え */
+        margin-left: 0;          /* 左マージンリセット */
+        width: 100%;             /* 幅いっぱい */
+        gap: 5px;
+    }
+
+    .sub_title, .sub_content {
+        text-align: center;
+        font-size: 12px;
+        width:170px ;             /* 幅自動調整 */
+    }
+
+    .link_button_area {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    .link_button {
+        min-width: 140px;
+        line-height: 32px;
+        font-size: 12px;
+    }
+
+        .main_right {
+        display: none;
+    }
+
+    /* main_left の画像を幅いっぱいに */
+    .main_left img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* main_left の下にテキストを擬似的に表示 */
+    .main_left::after {
+        content: "Exhibition";
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        font-family: 'Noto Serif KR', serif;
+        margin-top: 10px;
+        color: #000; /* 必要に応じて色を調整 */
+    }
+}
+
+/* access */
+
+@media screen and (max-width: 599px) {
+    main {
+        padding: 2em 1em;
+    }
+
+    main h1 {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .breadcrumb {
+        font-size: 10px;
+    }
+
+    .address_Box {
+        flex-direction: column; /* 横並び → 縦並び */
+        padding-left: 0;
+        padding-right: 0;
+        gap: 2em;
+    }
+
+    .map {
+        flex: 1 1 100%;
+    }
+
+    .main_access {
+        max-width: 100%;
+    }
+
+    .route {
+        font-size: 11px;
+    }
+
+    .main_access, .address_text p {
+        font-size: 11px;
+        line-height: 18px;
+    }
+
+    .icon {
+        width: 12px;
+        height: 12px;
+    }
+}
