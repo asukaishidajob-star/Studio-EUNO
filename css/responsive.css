@@ -1,6 +1,6 @@
 /* common */
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 599px) {
 
     body {
         font-size: 14px;
@@ -103,7 +103,7 @@
 
 /* index */
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 599px) {
 
     /* ファーストビュー */
     .first_view {
@@ -242,7 +242,7 @@
 
 /* about */
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 599px) {
 
     .main_box h1 {
         font-size: 16px;
@@ -296,7 +296,7 @@
 
 /* artists */
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 599px) {
 
     main {
         padding: 2em 1em;
@@ -329,7 +329,7 @@
 
 /* artists_datail */
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 599px) {
 
     main {
         padding: 2em 1em;
@@ -395,7 +395,7 @@
 
 /* exhibition */
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 599px) {
 
     .content {
         flex-direction: column; /* 横並び → 縦並び */
@@ -440,7 +440,7 @@
 
 /* showcase */
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 599px) {
 
     /* main_box 内のレイアウトを縦並びに */
     .main_box {
@@ -610,7 +610,7 @@
 
 /* access */
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 599px) {
     main {
         padding: 2em 1em;
     }
