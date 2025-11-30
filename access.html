@@ -61,43 +61,30 @@
 
   <div id="common-footer"></div>
 
-  <script>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
     fetch("common.html")
       .then(res => res.text())
       .then(data => {
         const temp = document.createElement("div");
         temp.innerHTML = data;
-        document.getElementById("common-header").innerHTML =
-          temp.querySelector("header").outerHTML;
-        document.getElementById("common-footer").innerHTML =
-          temp.querySelector("footer").outerHTML;
+
+        // 共通ヘッダー・フッター挿入
+        document.getElementById("common-header").innerHTML = temp.querySelector("header").outerHTML;
+        document.getElementById("common-footer").innerHTML = temp.querySelector("footer").outerHTML;
+
+        // ハンバーガーメニューイベント追加
+        const toggleButton = document.querySelector('.toggle_menu_button');
+        const menu = document.querySelector('.site_menu');
+
+        if (toggleButton && menu) {
+          toggleButton.addEventListener('click', () => {
+            menu.classList.toggle('active');
+          });
+        }
       })
       .catch(err => console.error("common.html の読み込みに失敗:", err));
-
-      fetch("common.html")
-  .then(res => res.text())
-  .then(data => {
-    const temp = document.createElement("div");
-    temp.innerHTML = data;
-
-    const header = temp.querySelector("header");
-    if (header) {
-        document.getElementById("common-header").innerHTML = header.outerHTML;
-    }
-
-    const footer = temp.querySelector("footer");
-    if (footer) document.getElementById("common-footer").innerHTML = footer.outerHTML;
-
-    // --- ここでハンバーガーメニューのイベントを追加 ---
-    const toggleButton = document.querySelector('.toggle_menu_button');
-    const menu = document.querySelector('.site_menu');
-    if (toggleButton && menu) {
-        toggleButton.addEventListener('click', () => {
-            menu.classList.toggle('active');
-        });
-    }
-  })
-  .catch(err => console.error(err));
-  </script>
+  });
+</script>
 </body>
 </html>

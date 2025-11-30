@@ -35,7 +35,7 @@
 
                   この展示を通して、観る者は陶器を媒介に、物理的な空間だけでなく、制作の手触りや時間、光の移ろいといった目に見えない感覚に触れることができます。ハラダ ナオが土に刻む手の動きと、光によって生まれる表情は、日常を離れたひとときの中で、静かで豊かな体験をもたらすでしょう。</p>
                   <p class="sub_title">期間</p>
-                  <p class="sub_content">22025/09/10(WED) ~ 2025/12/15(MON)</p>
+                  <p class="sub_content">2025/09/10(WED) ~ 2025/12/15(MON)</p>
                   <p class="sub_title">場所</p>
                   <p class="sub_content">Studio EUNO 2F 빛의 방</p>
                   <p class="sub_title">料金</p>
@@ -53,43 +53,30 @@
 
   <div id="common-footer"></div>
 
-  <script>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
     fetch("common.html")
       .then(res => res.text())
       .then(data => {
         const temp = document.createElement("div");
         temp.innerHTML = data;
-        document.getElementById("common-header").innerHTML =
-          temp.querySelector("header").outerHTML;
-        document.getElementById("common-footer").innerHTML =
-          temp.querySelector("footer").outerHTML;
+
+        // 共通ヘッダー・フッター挿入
+        document.getElementById("common-header").innerHTML = temp.querySelector("header").outerHTML;
+        document.getElementById("common-footer").innerHTML = temp.querySelector("footer").outerHTML;
+
+        // ハンバーガーメニューイベント追加
+        const toggleButton = document.querySelector('.toggle_menu_button');
+        const menu = document.querySelector('.site_menu');
+
+        if (toggleButton && menu) {
+          toggleButton.addEventListener('click', () => {
+            menu.classList.toggle('active');
+          });
+        }
       })
       .catch(err => console.error("common.html の読み込みに失敗:", err));
-
-      fetch("common.html")
-  .then(res => res.text())
-  .then(data => {
-    const temp = document.createElement("div");
-    temp.innerHTML = data;
-
-    const header = temp.querySelector("header");
-    if (header) {
-        document.getElementById("common-header").innerHTML = header.outerHTML;
-    }
-
-    const footer = temp.querySelector("footer");
-    if (footer) document.getElementById("common-footer").innerHTML = footer.outerHTML;
-
-    // --- ここでハンバーガーメニューのイベントを追加 ---
-    const toggleButton = document.querySelector('.toggle_menu_button');
-    const menu = document.querySelector('.site_menu');
-    if (toggleButton && menu) {
-        toggleButton.addEventListener('click', () => {
-            menu.classList.toggle('active');
-        });
-    }
-  })
-  .catch(err => console.error(err));
-  </script>
+  });
+</script>
 </body>
 </html>
